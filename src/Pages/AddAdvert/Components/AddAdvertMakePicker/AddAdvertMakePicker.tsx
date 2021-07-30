@@ -13,15 +13,22 @@ export const AddAdvertMakePicker = () => {
     dispatch(fetchAddAdvertMake());
   }, [dispatch]);
   return (
-    <div>
-      <Title variant="primary" className="makePicker__content-marginBottom" type="ultraSmall">
+    <div style={{ marginBottom: 65 }}>
+      <Title
+        variant="primary"
+        className="makePicker__content-marginBottom"
+        type="ultraSmall"
+      >
         1. Выбор марки автомобиля
       </Title>
       {make && (
         <Paper className="makePicker__content-wrapper">
           {make.map((m) => (
             <>
-              <Title className="makePicker__content-marginBottom" variant="primary">
+              <Title
+                className="makePicker__content-marginBottom"
+                variant="primary"
+              >
                 {m.alphabet}
               </Title>
               <List

@@ -5,6 +5,7 @@ import { AddAdvertSelectYear } from '../Components/AddAdvertSelectYear/AddAdvert
 
 import './AddAdvert.scss';
 const AddAdvert = () => {
+  const [advertData, setAdvertData] = React.useState;
   return (
     <main>
       <div className="addAdvert__title-wrapper">
