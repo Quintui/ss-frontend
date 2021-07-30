@@ -4,6 +4,7 @@ import { SearchCarSagaWatcher } from './ducks/searchCar/searchCarSaga';
 import { ProfileSagaWatcher } from './ducks/profile/profileSaga';
 import { AuthSagaWatcher } from './ducks/auth/authSaga';
 import { NewsSagaWatcher } from './ducks/news/newsSaga';
+import { AddAdvertSagaWatcher } from './ducks/addAdvert/addAdvertSaga';
 export default function* rootSaga() {
   yield all([
     AdvertSagaWatcher(),
@@ -11,5 +12,6 @@ export default function* rootSaga() {
     ProfileSagaWatcher(),
     AuthSagaWatcher(),
     NewsSagaWatcher(),
+    AddAdvertSagaWatcher(),
   ]);
 }

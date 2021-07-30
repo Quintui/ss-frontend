@@ -6,6 +6,7 @@ import searchCarReducer from './ducks/searchCar/searchCarReducer';
 import profileReducer from './ducks/profile/profileReducer';
 import rootSaga from './sagas';
 import newsReducer from './ducks/news/newsReducer';
+import addAdvertReducer from './ducks/addAdvert/addAdvertReducer';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -16,6 +17,7 @@ export const store = configureStore({
     searchCar: searchCarReducer,
     profile: profileReducer,
     news: newsReducer,
+    addAdvert: addAdvertReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ thunk: false }).concat(sagaMiddleware),
