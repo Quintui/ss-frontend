@@ -1,0 +1,29 @@
+@import '../../../../GlobalStyles/mixins';
+
+.addAdvertGenerationPicker__wrapper {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.addAdvertGenerationPicker__card_wrapper {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 15px 25px;
+  cursor: pointer;
+  @include theme-aware('background-color', 'secondary');
+}
+.addAdvertGenerationPicker__year-wrapper {
+  display: flex;
+  font-weight: 700;
+  @include theme-aware('color', 'default');
+}
+.addAdvertGenerationPicker__selected-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addAdvertGenerationPicker__selected-icon {
+  font-size: 26px;
+  @include theme-aware('color', 'secondary');
+}

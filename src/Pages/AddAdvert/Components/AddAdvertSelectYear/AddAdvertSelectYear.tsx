@@ -1,36 +1,46 @@
-import { ButtonGroup, Dropdown, Paper } from "byh-components";
-import React from "react";
-import { createArrayObjectOfAllYears } from "../../../../services/allYears";
-import "./AddAdvertSelectYear.scss";
+import { ButtonGroup, Dropdown, Paper, Title } from 'byh-components';
+import React, { Dispatch, SetStateAction } from 'react';
+import { dropdownDataType } from '../../../../Components/CarSelectForm/Components/ModelForm/ModelForm';
+import { createArrayObjectOfAllYears } from '../../../../services/allYears';
+import { advertDataForDbType } from '../../AddAdvert/AddAdvert';
+import './AddAdvertSelectYear.scss';
 
-export const AddAdvertSelectYear = () => {
+interface IProps {
+  setAdvertDataForDb: Dispatch<SetStateAction<advertDataForDbType | undefined>>;
+}
+export const AddAdvertSelectYear: React.FC<IProps> = ({ setAdvertDataForDb }) => {
   const mockFunc = (data: any) => {
-    console.log(data);
+    setAdvertDataForDb((prev) => ({ ...prev, year: data.id }));
   };
+
   return (
     <>
+      <Title style={{ marginBottom: 20 }} type="ultraSmall" variant="primary">
+        {' '}
+        2. Выбор года авто
+      </Title>
       <Paper
+        style={{ marginBottom: 65 }}
         height={70}
         display="flex"
-        className="addAdvertSelectYear__content-wrapper"
-      >
+        className="addAdvertSelectYear__content-wrapper">
         <div className="addAdvertSelectYear__content-wrapper">
           <ButtonGroup
-            buttons={createArrayObjectOfAllYears("year", 2012)}
+            buttons={createArrayObjectOfAllYears('year', 2012)}
             width={934}
             height={49}
             fontSize={22}
             callback={mockFunc}
-            defVariant={"secondary"}
+            defVariant={'secondary'}
           />
           <Dropdown
             height={48}
-            variant={"primary"}
+            variant={'primary'}
             width={195}
             labelFontSize={18}
-            label={"Раньше"}
+            label={'Раньше'}
             callback={mockFunc}
-            items={createArrayObjectOfAllYears("year", 1890, 2011)}
+            items={createArrayObjectOfAllYears('year', 1890, 2011)}
           />
         </div>
       </Paper>

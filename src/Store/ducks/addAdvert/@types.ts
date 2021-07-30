@@ -6,6 +6,11 @@ export type carMakesResponse = {
   }[];
 };
 
+export type carModelReq = {
+  id_car_make: number;
+  year: string;
+};
+
 export type carModelResponse = {
   name: string;
   id_car_make: number;
@@ -17,6 +22,10 @@ export type carGenerationResponse = {
   name: string;
   id_car_model: number;
   id_car_generation: number;
+};
+export type carGenReq = {
+  year: string;
+  id_car_model: number;
 };
 export type carSerieResponse = {
   name: string;
