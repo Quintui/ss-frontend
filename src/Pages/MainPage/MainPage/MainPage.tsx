@@ -1,9 +1,9 @@
-import React from 'react';
-import { CarSelectorForm } from '../../../Components/CarSelectForm';
-import { TypeSelect } from '../../../Components/TypeSelect';
-import { ProfitableOffers } from '../Components/ProfitableOffers/ProfitableOffers';
-import { SpecialOffers } from '../Components/SpecialOffers/SpecialOffers';
-import { TopicsSlider } from '../Components/TopicsSlider/TopicsSlider';
+import React from "react";
+import { CarSelectorForm } from "../../../Components/CarSelectForm";
+import { TypeSelect } from "../../../Components/TypeSelect";
+import { ProfitableOffers } from "../Components/ProfitableOffers/ProfitableOffers";
+import { SpecialOffers } from "../Components/SpecialOffers/SpecialOffers";
+import { TopicsSlider } from "../Components/TopicsSlider/TopicsSlider";
 
 export const MainPage = () => {
   return (
